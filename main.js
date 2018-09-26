@@ -30,7 +30,8 @@ var attemptArray=[];
   function match(id){
         if(attemptArray.indexOf(id)== -1) {
             attemptArray.push(id);
-            score-=1;
+            score+=1;
+            //console.log("the score is ", score)
         }
         if(markedArray.indexOf(id)== -1) {
             if(document.getElementById(id).style.backgroundColor=="red"){
@@ -83,7 +84,7 @@ var attemptArray=[];
                         break;
                     }
                     if((document.getElementById(id+(i*8)).style.backgroundColor=="red") && markedArray.indexOf(id+(i*8))== -1){
-                        console.log("Here");
+                        //console.log("Here");
                             if(i<result){
                                 result=i;
                                 closeDirection="B";
@@ -109,7 +110,7 @@ var attemptArray=[];
                         break;
                     }
                 }
-                console.log(closeDirection)
+                //console.log(closeDirection)
                 if(closeDirection=="R"){
                     document.getElementById(id).innerHTML='<img src="images/right.jpg" width="100%" height="100%">'; 
                 }else if(closeDirection=="L"){
@@ -123,6 +124,7 @@ var attemptArray=[];
                 
             }
         }
+        
         if(markedArray.length==8){
             document.getElementById("scoreCount").innerHTML=score;
             document.getElementById("endGame").style.display="block";

@@ -7,7 +7,7 @@ var attemptArray=[];
     var counter=1;
     for(i=0;i<8;i++){
         for(j=0;j<8;j++){
-                txt+="<div class='box' id='"+counter+"' onclick='match("+counter+")'><img id='img"+counter+"' src='asset/images/que.s.jpg' height='100%' width='100%'></div>";
+                txt+="<div class='box' id='"+counter+"' onclick='match("+counter+")'><img id='img"+counter+"' src='asset/images/ques.jpg' height='100%' width='100%'></div>";
                 counter+=1;
         }
         txt+="<br>"
